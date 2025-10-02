@@ -1,5 +1,4 @@
 import { Link, useRouter } from "@tanstack/react-router";
-import { ErrorComponent } from "@tanstack/react-router";
 
 interface CustomErrorProps {
   error: Error;

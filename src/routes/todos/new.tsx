@@ -16,7 +16,7 @@ function NewTodo() {
   const handleSubmit = async (data: TodoFormData) => {
     setIsLoading(true);
     try {
-      const newTodo = await api.createTodo(data);
+      await api.createTodo(data);
 
       // Invalidate todos list to refresh the cache
       await router.invalidate();
