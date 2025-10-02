@@ -1,9 +1,9 @@
 import { useState } from "react";
-import type { CreateTodoData, UpdateTodoData, Todo } from "../lib/types";
+import type { Todo, TodoFormData } from "../lib/types";
 
 interface TodoFormProps {
   todo?: Todo;
-  onSubmit: (data: CreateTodoData | UpdateTodoData) => Promise<void>;
+  onSubmit: (data: TodoFormData) => Promise<void>;
   onCancel: () => void;
   isLoading?: boolean;
 }

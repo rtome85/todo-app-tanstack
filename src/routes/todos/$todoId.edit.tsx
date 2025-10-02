@@ -6,7 +6,7 @@ import {
 import { useState } from "react";
 import { TodoForm } from "../../components/TodoForm";
 import { api } from "../../lib/api";
-import type { UpdateTodoData } from "../../lib/types";
+import type { TodoFormData } from "../../lib/types";
 
 function EditTodo() {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ function EditTodo() {
   const { todoId } = Route.useParams();
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (data: UpdateTodoData) => {
+  const handleSubmit = async (data: TodoFormData) => {
     setIsLoading(true);
     try {
       await api.updateTodo(Number(todoId), data);

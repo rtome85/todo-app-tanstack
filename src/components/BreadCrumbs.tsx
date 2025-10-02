@@ -24,7 +24,12 @@ export function Breadcrumbs() {
         match.pathname.endsWith("/edit")
       ) {
         label = "Edit Todo";
-      } else if (match.pathname.startsWith("/todos/") && match.params?.todoId) {
+      } else if (
+        match.pathname.startsWith("/todos/") &&
+        match.params &&
+        "todoId" in match.params &&
+        match.params.todoId
+      ) {
         label = `Todo #${match.params.todoId}`;
       }
 

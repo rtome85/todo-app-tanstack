@@ -6,14 +6,14 @@ import {
 import { useState } from "react";
 import { TodoForm } from "../../components/TodoForm";
 import { api } from "../../lib/api";
-import type { CreateTodoData } from "../../lib/types";
+import type { TodoFormData } from "../../lib/types";
 
 function NewTodo() {
   const navigate = useNavigate();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (data: CreateTodoData) => {
+  const handleSubmit = async (data: TodoFormData) => {
     setIsLoading(true);
     try {
       const newTodo = await api.createTodo(data);

@@ -6,10 +6,12 @@ export interface Todo {
   createdAt: string;
 }
 
-export interface CreateTodoData {
+export interface TodoFormData {
   title: string;
   description: string;
 }
+
+export interface CreateTodoData extends TodoFormData {}
 
 export interface UpdateTodoData {
   title?: string;
